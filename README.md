@@ -38,3 +38,7 @@ This will be built as a PowerShell module which will include the following comma
   * Summary: Shows the Guess Result Object.
   * Parameters: Guess Result Object.
   * Returns: None.
+
+## Current Status
+
+Current goal is to create the module and write the Select-Word function.
