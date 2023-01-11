@@ -41,4 +41,4 @@ This will be built as a PowerShell module which will include the following comma
 
 ## Current Status
 
-Current goal is to create the module and write the Select-Word function.
+Current goal is to write the Read-Guess function.
