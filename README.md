@@ -41,4 +41,4 @@ This will be built as a PowerShell module which will include the following comma
 
 ## Current Status
 
-Current goal is to write the Read-Guess function.
+Current goal is to design the data object to hold user's guesses.
