@@ -22,7 +22,7 @@ ForEach($import in @($Classes + $Public + $Private))
  
 # Variables containing words referenced across the module
 $answerWords = Get-Content -Path "$PSScriptRoot\Data\AnswerWords.txt"
-$guessWords = [System.Collections.Generic.HashSet[string]]@(Get-Content -Path "$PSScriptRoot\Data\GuessWords.txt")
+$legalGuessWords = [System.Collections.Generic.HashSet[string]]@(Get-Content -Path "$PSScriptRoot\Data\LegalGuessWords.txt")
 
 # Here I might...
 # Read in or create an initial config file and variable
