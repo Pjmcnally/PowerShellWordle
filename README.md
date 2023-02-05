@@ -35,8 +35,8 @@ This will be built as a PowerShell module which will include the following comma
   * Parameters: Guess, Word, Guess Result Object.
   * Returns: An object containing the guessed letters and whether they are correct or not.
 * Show-Result
-  * Summary: Shows the Guess Result Object.
-  * Parameters: Guess Result Object.
+  * Summary: Show the user the current state of the game
+  * Parameters: Correct Word, List of user guesses
   * Returns: None.
 
 ## Current Status

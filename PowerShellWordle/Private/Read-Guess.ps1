@@ -2,7 +2,7 @@ function Read-Guess {
     $guess = Read-Host "Please enter your guess (or enter 'quit' to quit)"
 
     while ((-not $legalGuessWords.contains($guess)) -and ($null -ne $guess)) {
-        $guess = $guess.ToUpper()
+        $guess = $guess.ToUpper().Trim()
         
         if ($guess -eq 'QUIT') {
             $guess = $null
