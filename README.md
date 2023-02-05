@@ -30,10 +30,6 @@ This will be built as a PowerShell module which will include the following comma
   * Summary: Reads the user's inputted guess and verifies it is a valid word.
   * Parameters: None
   * Returns: Guess.
-* Compare-Guess
-  * Summary: Compares the user's guess to the word.
-  * Parameters: Guess, Word, Guess Result Object.
-  * Returns: An object containing the guessed letters and whether they are correct or not.
 * Show-Result
   * Summary: Show the user the current state of the game
   * Parameters: Correct Word, List of user guesses
@@ -41,4 +37,4 @@ This will be built as a PowerShell module which will include the following comma
 
 ## Current Status
 
-Current goal is to design the data object to hold user's guesses.
+Current goal is to write the New-Wordle function.
