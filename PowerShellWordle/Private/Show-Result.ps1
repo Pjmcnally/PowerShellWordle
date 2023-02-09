@@ -1,11 +1,14 @@
 function Show-Result {
     [CmdletBinding()]
     param(
-        [Parameter()]
+        [Parameter(Mandatory=$true)]
         [string]$correctWord,
 
+        [Parameter(Mandatory=$true)]
+        [array]$guesses,
+
         [Parameter()]
-        [array]$guesses
+        [switch]$winner
     )
 
     $correctWordSet = [System.Collections.Generic.HashSet[string]]($correctWord.ToCharArray())
@@ -27,5 +30,9 @@ function Show-Result {
             Write-Host $letter -ForegroundColor $foregroundColor -BackgroundColor $backgroundColor -NoNewline
         }
         Write-Host # Adds a line break after each word is complete
+    }
+
+    if ($winner) {
+        Write-Host "Congrats! You won the game. It took you $($guesses.count) tries to get the correct answer."
     }
 }
