@@ -5,25 +5,28 @@ function Show-Result {
         [string]$correctWord,
 
         [Parameter(Mandatory=$true)]
-        [array]$guesses,
+        [System.Collections.ArrayList]$guesses,
 
         [Parameter()]
         [switch]$winner
     )
+    # TODO Display letter bank and indicate which letters have been guessed.
+    # TODO Look into how double letters are handled and clarify our display
 
     $correctWordSet = [System.Collections.Generic.HashSet[string]]($correctWord.ToCharArray())
 
     Clear-Host
-    $foregroundColor = 'White'
-    $backgroundColor = 'Black'
     foreach ($guess in $guesses) {
         $i = 0
         foreach ($letter in $guess.toCharArray()) {
             if ($letter -eq $correctWord[$i]) {
-                $foregroundColor = 'DarkGreen'
+                $backgroundColor = 'DarkGreen'
+                $foregroundColor = 'Black'
             } elseif ($correctWordSet.Contains($letter)) {
-                $foregroundColor = 'DarkYellow'
+                $backgroundColor = 'DarkYellow'
+                $foregroundColor = 'Black'
             } else {
+                $backgroundColor = 'Black'
                 $foregroundColor = 'White'
             }
             $i += 1
