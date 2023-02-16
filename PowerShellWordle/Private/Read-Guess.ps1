@@ -14,5 +14,6 @@ function Read-Guess {
         }
     }
 
-    Return $guess
+    $guessObj = [Guess]::new($guess)
+    Return $guessObj
 }

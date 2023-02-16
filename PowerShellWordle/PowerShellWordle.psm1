@@ -1,7 +1,7 @@
 Set-StrictMode -Version Latest
 
 # Setup classes - This must be done manually as import order is important
-$Classes = @()
+$Classes = @(Get-ChildItem -Path $PSScriptRoot\Classes\*.ps1 -ErrorAction SilentlyContinue)
 
 # Get public and private function definition files.
 $Public  = @( Get-ChildItem -Path $PSScriptRoot\Public\*.ps1 -ErrorAction SilentlyContinue )

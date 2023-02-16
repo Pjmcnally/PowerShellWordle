@@ -10,13 +10,13 @@ function New-Wordle {
     $playing = $true
 
     while ($playing) {
-        $readGuess = Read-Guess
-        [void]$guesses.Add($readGuess)
+        $newGuess = Read-Guess
+        [void]$guesses.Add($newGuess)
         
-        if ($readGuess -eq $selectWord) {
+        if ($newGuess.Equals($selectWord)) {
             Show-Result -correctWord $selectWord -guesses $guesses -winner
             $playing = $false
-        } elseif ($null -eq $readGuess) {
+        } elseif ($newGuess.IsEmpty()) {
             $playing = $false
         } else {
             Show-Result -correctWord $selectWord -guesses $guesses
